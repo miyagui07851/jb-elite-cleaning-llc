@@ -15,7 +15,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* MASCOTA BUCKET MOVIÉNDOSE */
+#idle-bucket {
+  position: fixed;
+  left: 30px;
+  bottom: 95px;
+  width: 170px;
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(25px) scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.35));
+}
 
+#idle-bucket.show {
+  opacity: 1;
+  visibility: visible;
+  animation: bucketMove 1.2s ease-in-out infinite;
+}
+
+#idle-bucket img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Movimiento de la imagen */
+@keyframes bucketMove {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-10px) rotate(-4deg); }
+  50%  { transform: translateY(3px) rotate(4deg); }
+  75%  { transform: translateY(-6px) rotate(-2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Efecto de tocar pantalla del OTRO lado */
+.tap-ring {
+  position: fixed;
+  left: 185px;
+  bottom: 155px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(59, 130, 246, 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999998;
+  opacity: 0;
+}
+
+.tap-ring.show {
+  animation: tapRing 0.85s ease-out infinite;
+}
+
+@keyframes tapRing {
+  0% { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
   <style>
     :root {
       --navy: #0f172a;
