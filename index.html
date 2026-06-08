@@ -1006,10 +1006,13 @@
     }
 
     #idle-bucket img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
+    #idle-bucket img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
       background: transparent;
     }
 
@@ -1084,7 +1087,7 @@
     .btn,
     .float-btn,
     .mobile-sticky a {
-      cursor: url("images/imagesbucket-cursor.png") 16 16, auto !important;
+   cursor: url("images/imagesbucket-cursor.png") 16 16, auto !important;
     }
 
   </style>
@@ -1548,11 +1551,11 @@
 
 
 
-  <!-- Idle bucket animation: appears after 10 seconds without cursor movement -->
-  <div id="idle-bucket" aria-hidden="true">
-    <img id="bucket-img" src="images/imagesbucket.png" alt="Cleaning bucket mascot">
-  </div>
-  <div class="tap-ring" id="tap-ring" aria-hidden="true"></div>
+ <!-- Idle bucket mascot -->
+<div id="idle-bucket" aria-hidden="true">
+  <img id="bucket-img" src="images/imagesbucket.png" alt="J&B Elite Cleaning Services bucket mascot">
+</div>
+<div class="tap-ring" id="tap-ring" aria-hidden="true"></div>
 
   <div class="floating-actions">
     <a class="float-btn whatsapp-float" href="https://wa.me/19148140341?text=Hello%2C%20I%20would%20like%20a%20cleaning%20quote." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
