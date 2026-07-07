@@ -1,14 +1,13 @@
 # J&B Elite Commercial Cleaning LLC
 
-Professional commercial cleaning services website.
+GitHub Pages ready website.
 
-## Deploy instructions
-Upload these files to the ROOT of the GitHub repository:
+Upload the CONTENTS of this folder to the repository root:
 
 - index.html
 - style.css
 - script.js
-- images/
+- README.md
+- .nojekyll
 - CNAME
-
-Do not rename image files. Do not upload PNG images as index.html.
+- images/
