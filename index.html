@@ -1,214 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>J&B Elite Commercial Cleaning LLC | New York Commercial Cleaning</title>
-  <meta name="description" content="J&B Elite Commercial Cleaning LLC provides professional commercial cleaning, office cleaning, medical office cleaning, restaurant cleaning, bank cleaning and janitorial services in Yonkers, Westchester, Bronx, Manhattan, White Plains, New Rochelle and Mount Vernon." />
-  <meta name="theme-color" content="#061d3f" />
-  <link rel="icon" href="images/logo.png" />
-  <link rel="preload" href="images/logo.png" as="image" />
-  <link rel="preload" href="images/juanito-peek.png" as="image" />
-  <link rel="preload" href="images/juanito-hello.png" as="image" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>J&B Elite Commercial Cleaning LLC | Professional Cleaning Services</title>
+  <meta name="description" content="J&B Elite Commercial Cleaning LLC provides commercial cleaning, office cleaning, medical office cleaning, restaurant cleaning, bank cleaning, janitorial and post-construction cleaning in New York.">
+  <meta name="theme-color" content="#061d3f">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top">
-    <div class="nav-wrap">
-      <a class="brand" href="#home" aria-label="J&B Elite Home">
-        <img src="images/logo.png" alt="J&B Elite Commercial Cleaning LLC logo" />
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
-      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#process">Process</a>
-        <a href="#areas">Areas</a>
-        <a href="#estimate">Estimate</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="quote-btn nav-quote" href="#contact">Free Quote</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <button class="brand page-link" data-page="home" aria-label="J&B Elite home"><img src="images/logo.png" alt="J&B Elite Commercial Cleaning LLC logo"></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <button class="page-link active" data-page="services">Services</button>
+      <button class="page-link" data-page="why">Why Us</button>
+      <button class="page-link" data-page="process">Process</button>
+      <button class="page-link" data-page="areas">Areas</button>
+      <button class="page-link" data-page="estimate">Estimate</button>
+      <button class="page-link" data-page="contact">Contact</button>
+    </nav>
+    <button class="quote-btn page-link" data-page="contact">Free Quote</button>
+  </div>
+</header>
+
+<main id="app">
+  <section class="page active" id="page-home" aria-label="Home">
+    <img class="peek-right" src="images/juanito-peek.png" alt="Juanito peeking from the right side">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Professional Commercial Cleaning Services</p>
+        <h1>A Cleaner Space.<br>A Better Image.<br><span>Every Time.</span></h1>
+        <p class="lead">J&B Elite Commercial Cleaning LLC provides top-quality cleaning services for businesses across New York. Reliable, professional and always spotless.</p>
+        <div class="icon-row">
+          <div><span>🏢</span><b>Commercial<br>Cleaning</b></div>
+          <div><span>🛡️</span><b>Reliable &<br>Insured</b></div>
+          <div><span>👥</span><b>Trained<br>Professionals</b></div>
+          <div><span>🍃</span><b>Eco-Friendly<br>Products</b></div>
+        </div>
+        <div class="hero-actions">
+          <button class="gold-btn page-link" data-page="contact">Get Free Quote</button>
+          <button class="outline-btn page-link" data-page="services">Our Services</button>
+        </div>
+      </div>
+      <div class="hello-card">
+        <div class="bubble">Hello, I’m <strong>Juanito</strong><br>How can I help you?</div>
+        <img src="images/juanito-hello.png" alt="Juanito greeting visitors">
+      </div>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="hero page-section" id="home">
-      <img class="juanito-peek" src="images/juanito-peek.png" alt="Juanito mascot peeking from the right side of the screen" />
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Professional Commercial Cleaning Services</p>
-          <h1>A Cleaner Space.<br>A Better Image.<br><span>Every Time.</span></h1>
-          <p class="hero-text">J&B Elite Commercial Cleaning LLC provides top-quality cleaning services for businesses across New York. Reliable, professional and always spotless.</p>
-
-          <div class="trust-icons" aria-label="Service highlights">
-            <div><span>🏢</span><strong>Commercial<br>Cleaning</strong></div>
-            <div><span>🛡️</span><strong>Reliable &<br>Insured</strong></div>
-            <div><span>👥</span><strong>Trained<br>Professionals</strong></div>
-            <div><span>🍃</span><strong>Eco-Friendly<br>Products</strong></div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Get Free Quote</a>
-            <a class="btn secondary" href="#services">Our Services</a>
-          </div>
-        </div>
-
-        <div class="hello-card" aria-label="Juanito help message">
-          <div class="speech">Hola, soy<br><strong>Juanito</strong><br><span>¿En qué te puedo ayudar?</span></div>
-          <img src="images/juanito-hello.png" alt="Juanito waving hello" />
-        </div>
-      </div>
-    </section>
-
-    <section class="service-strip page-section" id="areas">
-      <div class="container strip-card">
-        <h2>📍 Proudly Serving</h2>
-        <ul>
-          <li>Yonkers</li>
-          <li>Westchester County</li>
-          <li>White Plains</li>
-          <li>New Rochelle</li>
-          <li>Mount Vernon</li>
-          <li>Bronx</li>
-          <li>Manhattan</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="estimate-section page-section" id="estimate">
-      <div class="container estimate-card">
-        <div class="section-title light">
-          <p>Instant Estimate</p>
-          <h2>Quick commercial cleaning calculator</h2>
-          <span>This is an estimated starting range. Final price depends on scope, walkthrough and cleaning frequency.</span>
-        </div>
-        <div class="calculator-grid">
-          <form class="calculator" id="calcForm">
-            <label>Square Feet
-              <div class="input-row"><input id="sqft" type="number" min="500" step="100" value="3000" /><span>sq ft</span></div>
-            </label>
-            <label>Frequency
-              <select id="frequency">
-                <option value="0.10">One Time</option>
-                <option value="0.13">Monthly</option>
-                <option value="0.16">Biweekly</option>
-                <option value="0.20">Weekly</option>
-                <option value="0.24">Daily</option>
-              </select>
-            </label>
-            <label>Cleaning Type
-              <select id="cleanType">
-                <option value="1">Standard Cleaning</option>
-                <option value="1.25">Deep Cleaning</option>
-                <option value="1.35">Medical Office</option>
-                <option value="1.30">Post Construction</option>
-              </select>
-            </label>
-          </form>
-          <div class="estimate-result">
-            <p>Estimated monthly starting range:</p>
-            <strong id="range">$300 - $390</strong>
-            <span>Includes labor estimate, supplies planning and recurring service.</span>
-            <a class="btn primary" href="#contact">Get Free Quote</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services page-section" id="services">
-      <div class="container">
-        <div class="section-title">
-          <p>Our Services</p>
-          <h2>Cleaning solutions for every business</h2>
-        </div>
-        <div class="cards">
-          <article><span>🏙️</span><h3>Commercial Cleaning</h3><p>Complete cleaning solutions for all types of commercial spaces.</p></article>
-          <article><span>🖥️</span><h3>Office Cleaning</h3><p>Keep your workplace clean, healthy and productive.</p></article>
-          <article><span>✚</span><h3>Medical Office Cleaning</h3><p>Disinfection and sanitation for medical and dental practices.</p></article>
-          <article><span>🍽️</span><h3>Restaurant Cleaning</h3><p>Kitchen deep cleaning and dining area maintenance.</p></article>
-          <article><span>🏦</span><h3>Bank Cleaning</h3><p>Professional cleaning with attention to detail and security.</p></article>
-          <article><span>✨</span><h3>And More Services</h3><p>Janitorial, deep cleaning, post construction and more.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="why page-section" id="why-us">
-      <div class="container why-grid">
-        <div>
-          <p class="eyebrow">Why Choose Us</p>
-          <h2>We go the extra mile for you</h2>
-          <ul class="checks">
-            <li>Licensed, bonded & insured</li>
-            <li>Highly trained cleaning professionals</li>
-            <li>Flexible scheduling</li>
-            <li>100% satisfaction guaranteed</li>
-          </ul>
-          <a class="btn primary" href="#process">Learn More</a>
-        </div>
-        <div class="photo-card" role="img" aria-label="Professional J&B Elite cleaning team in an office">
-          <div class="worker worker-one"></div>
-          <div class="worker worker-two"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="process page-section" id="process">
-      <div class="container">
-        <div class="section-title">
-          <p>Our Process</p>
-          <h2>Simple, professional and reliable</h2>
-        </div>
-        <div class="steps">
-          <article><b>01</b><h3>Request a Quote</h3><p>Tell us about your location, schedule and cleaning needs.</p></article>
-          <article><b>02</b><h3>Walkthrough</h3><p>We review the scope and prepare an accurate service plan.</p></article>
-          <article><b>03</b><h3>Service Begins</h3><p>Our trained team keeps your facility clean and ready.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact page-section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Free Quote</p>
-          <h2>Ready for a cleaner business?</h2>
-          <p>Complete the form and we will contact you to schedule your estimate.</p>
-          <div class="contact-links">
-            <a href="tel:+19148434368">📞 Call: (914) 843-4368</a>
-            <a href="mailto:info@jbelitecleaning.com">✉️ Email: info@jbelitecleaning.com</a>
-          </div>
-        </div>
-        <form class="quote-form" id="quoteForm">
-          <input name="name" placeholder="Full Name" required />
-          <input name="company" placeholder="Company Name" />
-          <input name="phone" placeholder="Phone Number" required />
-          <input name="email" type="email" placeholder="Email Address" required />
-          <select name="service" required>
-            <option value="">Select Service</option>
-            <option>Commercial Cleaning</option>
-            <option>Office Cleaning</option>
-            <option>Medical Office Cleaning</option>
-            <option>Restaurant Cleaning</option>
-            <option>Bank Cleaning</option>
-            <option>Post Construction Cleaning</option>
-          </select>
-          <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
-          <button class="btn primary" type="submit">Submit Free Quote</button>
-          <p class="form-msg" id="formMsg" role="status"></p>
+    <div class="serving-bar">
+      <strong>📍 Proudly Serving</strong>
+      <span>Yonkers</span><span>Westchester County</span><span>White Plains</span><span>New Rochelle</span><span>Mount Vernon</span><span>Bronx</span><span>Manhattan</span>
+    </div>
+    <section class="estimate-card mini-estimate">
+      <p class="eyebrow center">Instant Estimate</p>
+      <h2>Quick commercial cleaning calculator</h2>
+      <p>This is an estimated starting range. Final price depends on scope, walkthrough and cleaning frequency.</p>
+      <div class="estimate-grid">
+        <form class="calc-form">
+          <label>Square Feet<input id="sqft" type="number" min="300" value="3000"><small>sq ft</small></label>
+          <label>Frequency<select id="frequency"><option value="1">One Time</option><option value="4">Weekly</option><option value="8">Biweekly</option><option value="20">Daily</option><option value="2">Monthly</option></select></label>
+          <label>Cleaning Type<select id="cleanType"><option value="1">Standard Cleaning</option><option value="1.35">Deep Cleaning</option><option value="1.5">Post Construction</option><option value="1.25">Medical / Sanitation</option></select></label>
         </form>
+        <div class="calc-result"><span>Estimated monthly starting range:</span><strong id="estimateResult">$300 - $390</strong><p>Includes labor estimate, supplies planning and recurring service.</p><button class="gold-btn page-link" data-page="contact">Get Free Quote</button></div>
       </div>
     </section>
-  </main>
+    <section class="container service-preview">
+      <p class="eyebrow center">Our Services</p><h2>Cleaning solutions for every business</h2>
+      <div class="cards six"><article>🏢<h3>Commercial Cleaning</h3><p>Complete cleaning solutions for all commercial spaces.</p></article><article>🪑<h3>Office Cleaning</h3><p>Keep your workspace clean, healthy and productive.</p></article><article>✚<h3>Medical Office Cleaning</h3><p>Disinfection and sanitation for medical and dental practices.</p></article><article>🍴<h3>Restaurant Cleaning</h3><p>Kitchen deep cleaning and dining area maintenance.</p></article><article>🏦<h3>Bank Cleaning</h3><p>Professional cleaning with attention to detail and security.</p></article><article>✨<h3>And More Services</h3><p>Janitorial, deep cleaning, post construction and more.</p></article></div>
+    </section>
+  </section>
 
-  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <img src="images/logo.png" alt="J&B Elite Commercial Cleaning LLC logo" />
-      <p>© <span id="year"></span> J&B Elite Commercial Cleaning LLC. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <section class="page" id="page-services"><div class="container subpage"><h1>Commercial Cleaning Services</h1><p>Professional services built for offices, restaurants, banks, clinics, retail locations and commercial spaces.</p><div class="cards"><article><h3>Commercial Cleaning</h3><p>Recurring cleaning for business spaces.</p></article><article><h3>Office Cleaning</h3><p>Desks, floors, restrooms, trash removal and common areas.</p></article><article><h3>Medical Office Cleaning</h3><p>Sanitation-focused cleaning for medical and dental offices.</p></article><article><h3>Restaurant Cleaning</h3><p>Dining, restroom and kitchen support cleaning.</p></article><article><h3>Bank Cleaning</h3><p>Secure, detail-oriented cleaning for financial offices.</p></article><article><h3>Post Construction</h3><p>Dust removal, final clean and move-in readiness.</p></article></div></div></section>
+  <section class="page" id="page-why"><div class="container subpage"><h1>Why Choose J&B Elite?</h1><div class="split"><div><p class="lead">We go the extra mile for every client with consistent service, professional crews and clear communication.</p><ul class="checklist"><li>Licensed, bonded and insured</li><li>Highly trained cleaning professionals</li><li>Flexible scheduling</li><li>Reliable quality control</li><li>100% satisfaction focused</li></ul></div><div class="photo-box"><h3>Professional image starts with a clean facility.</h3></div></div></div></section>
+  <section class="page" id="page-process"><div class="container subpage"><h1>Our Process</h1><div class="steps"><article><b>1</b><h3>Request a Quote</h3><p>Send your location, frequency and cleaning needs.</p></article><article><b>2</b><h3>Walkthrough</h3><p>We review the scope and confirm expectations.</p></article><article><b>3</b><h3>Custom Plan</h3><p>We create a cleaning plan for your business.</p></article><article><b>4</b><h3>Professional Service</h3><p>Our team delivers consistent cleaning results.</p></article></div></div></section>
+  <section class="page" id="page-areas"><div class="container subpage"><h1>Service Areas</h1><p>J&B Elite Commercial Cleaning LLC proudly serves:</p><div class="area-tags"><span>Yonkers</span><span>Westchester County</span><span>White Plains</span><span>New Rochelle</span><span>Mount Vernon</span><span>Bronx</span><span>Manhattan</span><span>Mamaroneck</span><span>Bronxville</span></div></div></section>
+  <section class="page" id="page-estimate"><div class="container subpage"><section class="estimate-card"><p class="eyebrow center">Instant Estimate</p><h1>Quick Commercial Cleaning Calculator</h1><div class="estimate-grid"><form class="calc-form"><label>Square Feet<input id="sqft2" type="number" min="300" value="3000"></label><label>Frequency<select id="frequency2"><option value="1">One Time</option><option value="4">Weekly</option><option value="8">Biweekly</option><option value="20">Daily</option><option value="2">Monthly</option></select></label><label>Cleaning Type<select id="cleanType2"><option value="1">Standard Cleaning</option><option value="1.35">Deep Cleaning</option><option value="1.5">Post Construction</option><option value="1.25">Medical / Sanitation</option></select></label></form><div class="calc-result"><span>Estimated monthly starting range:</span><strong id="estimateResult2">$300 - $390</strong><button class="gold-btn page-link" data-page="contact">Request Final Quote</button></div></div></section></div></section>
+  <section class="page" id="page-contact"><div class="container subpage"><h1>Get a Free Quote</h1><p class="lead">Use the options below to contact J&B Elite Commercial Cleaning LLC.</p><div class="contact-grid"><a href="tel:+19148434368">📞 Call Now</a><a href="mailto:info@jbelitecleaning.com">✉️ Email Us</a><a href="https://wa.me/19148434368" target="_blank" rel="noopener">💬 WhatsApp</a></div><form class="quote-form" onsubmit="event.preventDefault(); alert('Thank you. J&B Elite will contact you soon.'); this.reset();"><input required placeholder="Full Name"><input required placeholder="Phone or Email"><input placeholder="Business Name"><select><option>Commercial Cleaning</option><option>Office Cleaning</option><option>Medical Office Cleaning</option><option>Restaurant Cleaning</option><option>Post Construction Cleaning</option></select><textarea placeholder="Tell us about your cleaning needs"></textarea><button class="gold-btn">Submit Request</button></form></div></section>
+</main>
+<footer><p>© <span id="year"></span> J&B Elite Commercial Cleaning LLC. All rights reserved.</p></footer>
+<script src="script.js"></script>
 </body>
 </html>

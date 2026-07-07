@@ -1,18 +1,32 @@
-(function(){
-  const menuToggle=document.getElementById('menuToggle');
-  const mainNav=document.getElementById('mainNav');
-  if(menuToggle&&mainNav){menuToggle.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));}
-  const sqft=document.getElementById('sqft'),freq=document.getElementById('frequency'),type=document.getElementById('cleanType'),range=document.getElementById('range');
-  function money(n){return '$'+Math.round(n).toLocaleString('en-US')}
-  function calc(){if(!sqft||!freq||!type||!range)return;const s=Math.max(500,Number(sqft.value)||3000);const base=s*Number(freq.value)*Number(type.value);range.textContent=`${money(base)} - ${money(base*1.3)}`}
-  [sqft,freq,type].forEach(el=>el&&el.addEventListener('input',calc));calc();
-  const form=document.getElementById('quoteForm'),msg=document.getElementById('formMsg');
-  if(form&&msg){form.addEventListener('submit',e=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());const subject=encodeURIComponent('Free Quote Request - J&B Elite Commercial Cleaning');const body=encodeURIComponent(`Name: ${data.name||''}\nCompany: ${data.company||''}\nPhone: ${data.phone||''}\nEmail: ${data.email||''}\nService: ${data.service||''}\nMessage: ${data.message||''}`);msg.textContent='Thank you. Your email window will open now.';window.location.href=`mailto:info@jbelitecleaning.com?subject=${subject}&body=${body}`;setTimeout(()=>{msg.textContent='';form.reset();},6000);});}
-  const back=document.getElementById('backTop');
-  if(back){window.addEventListener('scroll',()=>back.classList.toggle('show',window.scrollY>500));back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const navLinks=[...document.querySelectorAll('.main-nav a')];
-  const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}})},{rootMargin:'-45% 0px -50% 0px',threshold:0});
-  sections.forEach(s=>obs.observe(s));
-})();
+const pages = document.querySelectorAll('.page');
+const links = document.querySelectorAll('.page-link');
+const navBtns = document.querySelectorAll('.main-nav .page-link');
+const menu = document.getElementById('mainNav');
+const menuToggle = document.getElementById('menuToggle');
+function showPage(page){
+  pages.forEach(p => p.classList.remove('active'));
+  const target = document.getElementById(`page-${page}`) || document.getElementById('page-home');
+  target.classList.add('active');
+  navBtns.forEach(b => b.classList.toggle('active', b.dataset.page === page));
+  menu.classList.remove('open');
+  window.scrollTo({top:0,left:0,behavior:'instant'});
+}
+links.forEach(link => link.addEventListener('click', e => { e.preventDefault(); showPage(link.dataset.page || 'home'); }));
+menuToggle.addEventListener('click', () => menu.classList.toggle('open'));
+document.getElementById('year').textContent = new Date().getFullYear();
+function calculate(sqftId, freqId, typeId, resultId){
+  const sqft = Math.max(300, Number(document.getElementById(sqftId)?.value || 3000));
+  const frequency = Number(document.getElementById(freqId)?.value || 1);
+  const type = Number(document.getElementById(typeId)?.value || 1);
+  let base = Math.max(180, sqft * 0.10 * frequency * type);
+  if(frequency >= 8) base *= .90;
+  if(frequency >= 20) base *= .82;
+  const low = Math.round(base / 10) * 10;
+  const high = Math.round(base * 1.30 / 10) * 10;
+  const el = document.getElementById(resultId);
+  if(el) el.textContent = `$${low.toLocaleString()} - $${high.toLocaleString()}`;
+}
+[['sqft','frequency','cleanType','estimateResult'],['sqft2','frequency2','cleanType2','estimateResult2']].forEach(ids=>{
+  ids.slice(0,3).forEach(id=>document.getElementById(id)?.addEventListener('input',()=>calculate(...ids)));
+  calculate(...ids);
+});

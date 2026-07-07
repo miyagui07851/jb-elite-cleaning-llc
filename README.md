@@ -1,2 +1,10 @@
 # J&B Elite Commercial Cleaning LLC
-Professional commercial cleaning services website.
+
+GitHub Pages ready website.
+
+Upload these files to the repository root:
+- index.html
+- style.css
+- script.js
+- images/
+- README.md
